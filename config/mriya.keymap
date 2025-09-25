@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
 #define DEF 0
 #define LWR 1
@@ -24,28 +23,28 @@
 
         default_layer {
             bindings = <
-  &kp GRAVE  &kp Q  &kp W     &kp E      &kp R         &kp T               &kp Y            &kp U      &kp I      &kp O                   &kp P     &kp BACKSPACE
-  &kp TAB    &kp A  &kp S     &kp D      &kp F         &kp G               &kp H            &kp J      &kp K      &kp L                   &kp SEMI  &kp SQT
-  &kp LALT   &kp Z  &kp X     &kp C      &kp V         &kp B               &kp N            &kp M      &kp COMMA  &kp DOT                 &kp FSLH  &kp RALT
-                    &kp LGUI  &kp LCTRL  &lt 1 DELETE  &mt LSHIFT SPACE    &mt RSHFT ENTER  &lt 2 ESC  &kp RCTRL  &mt RGUI RIGHT_BRACKET
+  &kp ESCAPE  &kp Q  &kp W     &kp E      &kp R         &kp T               &kp Y            &kp U            &kp I      &kp O     &kp P     &kp GRAVE
+  &kp TAB     &kp A  &kp S     &kp D      &kp F         &kp G               &kp H            &kp J            &kp K      &kp L     &kp SEMI  &kp SQT
+  &kp LALT    &kp Z  &kp X     &kp C      &kp V         &kp B               &kp N            &kp M            &kp COMMA  &kp DOT   &kp FSLH  &kp RALT
+                     &kp LGUI  &kp LCTRL  &lt 1 DELETE  &mt LSHIFT SPACE    &mt RSHFT ENTER  &lt 2 BACKSPACE  &kp RCTRL  &kp RGUI
             >;
         };
 
         lower_layer {
             bindings = <
-  &kp UNDER       &kp F1    &kp F2  &kp F3    &kp F4    &kp F5       &kp F6     &kp F7    &kp F8    &kp F9     &kp F10    &kp F11
-  &mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &kp MINUS  &kp EQUAL  &kp F12
-  &trans          &kp N1    &kp N2  &kp N3    &kp N4    &kp N5       &kp N6     &kp N7    &kp N8    &kp N9     &kp N0     &mt RALT SLASH
-                            &to 3   &trans    &trans    &trans       &trans     &trans    &trans    &trans
+  &kp F1    &kp F2    &kp F3  &kp F4    &kp F5    &kp F6       &kp F7     &kp F8    &kp F10   &kp F11    &kp F12    &kp F11
+  &kp PLUS  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &kp UNDER  &kp EQUAL  &kp MINUS
+  &trans    &kp N1    &kp N2  &kp N3    &kp N4    &kp N5       &kp N6     &kp N7    &kp N8    &kp N9     &kp N0     &mt RALT SLASH
+                      &to 3   &trans    &trans    &trans       &trans     &trans    &trans    &trans
             >;
         };
 
         raise_layer {
             bindings = <
-  &msc SCRL_UP    &kp KP_SLASH     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp C_MUTE           &kp PAGE_UP    &kp RC(LEFT)  &kp UP_ARROW    &kp LC(RIGHT)  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-  &msc SCRL_DOWN  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp C_VOLUME_UP      &kp PAGE_DOWN  &kp LEFT      &kp DOWN_ARROW  &kp RIGHT      &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-  &trans          &kp KP_N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp C_VOLUME_DOWN    &none          &kp HOME      &none           &kp END        &kp LEFT_BRACE        &kp RIGHT_BRACE
-                                   &trans     &trans     &trans     &trans               &trans         &trans        &trans          &trans
+  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none   &none   &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp PAGE_UP    &kp RC(LEFT)  &kp UP_ARROW    &kp LC(RIGHT)  &kp PRINTSCREEN  &kp BACKSPACE
+  &kp K_MUTE         &none            &none   &none   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp PAGE_DOWN  &kp LEFT      &kp DOWN_ARROW  &kp RIGHT      &kp INS          &kp DEL
+  &trans             &none            &none   &none   &kp LEFT_BRACE        &kp RIGHT_BRACE          &none          &kp HOME      &none           &kp END        &none            &trans
+                                      &trans  &trans  &trans                &trans                   &trans         &trans        &trans          &trans
             >;
         };
 
